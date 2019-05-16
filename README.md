@@ -1,29 +1,43 @@
 # directive
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 本地运行
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
+### Lints和修复文件
 ```
 npm run lint
 ```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+### 提示element ui依赖只是单纯的展示作用
+### vue自定义全局命令用法：
+```
+main.js文件中引入：
+import directive from "./directive/directive"
+Vue.use(directive)
+在组件中使用即可：
+<el-button type="primary" v-monitor="{name:'查询事件',params:formInline}">查询</el-button>
+```
+### v-monitor中所传参数：
+```
+name:当前点击事件的名称
+params:当前要调用的接口传的参数
+```
+### 全局指令路径：/src/directive/directive.js
+```
+name:当前点击事件的名称
+params:当前要调用的接口传的参数
+```
